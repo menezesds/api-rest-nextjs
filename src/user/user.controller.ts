@@ -35,9 +35,8 @@ export class UserController {
         
 
         const updatedUser = await this.userRepository.updateUser(id, userdata);
-
         return {
-            user: updatedUser, 
+            user: updatedUser.id, 
             message: 'User updated successfully'
         }
     }
