@@ -72,7 +72,7 @@ export class UserRepository {
                     password: updateDataUser.password,
                 }
             });
-            return user !== null;
+            return user;
         } catch (error) {
             throw new NotFoundException('Unable to update user');
         }
